@@ -1,0 +1,190 @@
+.site {
+width: 1000px;
+height: 1300px;
+margin: auto;
+}
+
+.header {
+width: 1000px;
+height: 250px;
+background: #D3D3D3;
+}
+
+.logo {
+width: 1000px;
+height: 220px;
+text-align: center;
+}
+
+.navigation {
+width: 1000px;
+height: 30px;
+background: #C0C0C0;
+}
+
+.main {
+width: 1000px;
+height: 1100px;
+background: #A9A9A9;
+text-align: center;
+}
+
+.footer {
+width: 1000px;
+height: 58px;
+background: #808080;
+}
+
+.con{
+
+	background: #D8BFD8;
+	padding:70px;
+	display: flex;
+	justify-content: center;
+}
+
+.jumpbox{
+	width:60px;
+	height:60px;
+	background-color:red;
+	border-radius: 40px;
+	animation: jump 0.5s infinite;
+	position: relative;
+	top: 25px;
+}
+.jumpbox::after{
+	content: "";
+    position: absolute;
+	width: 40px;
+	height: 20px;
+	background-color: black;
+	bottom:-19px;
+	border-radius: 60%;
+	animation: shadow 6s infinite;
+}
+@keyframes jump{
+   0%, 100% {
+	transform: translateY(0) scaleY(0.7);
+}
+50% {
+	transform: translateY(-75px) scaleY(1);
+}
+}
+
+.con1{
+	background:#EE82EE;
+	padding:100px;
+	display: flex;
+	justify-content: center;
+	margin:0px auto;
+}
+.con1 div{
+		width:60px;
+	height:60px;
+	
+	border-radius: 5px;
+	margin: 30px;
+}
+.ob1{
+	background:#191970;
+	animation: spin 1s infinite;
+}
+@keyframes spin{
+   0% {
+	transform: rotate(0);
+}
+100% {
+	transform: rotate(360deg);
+}}
+
+.ob2{
+	background: #00FFFF;
+	animation: scale 5s infinite;
+}
+@keyframes scale{
+   0%, 100% {
+	transform: scale(1);
+}
+50% {
+	transform: scale(1.8);
+}
+}
+
+.ob3{
+	background:	#008080;
+	animation: bounce 5s infinite;
+}
+@keyframes bounce{
+   0%, 100% {
+	transform: translateY(0);
+}
+50% {
+	transform: translateY(-45px);
+}
+}
+
+.ob4{
+	background:#8B008B;
+	animation: shake 5s infinite;
+}
+@keyframes shake{
+   0%, 100% {
+	transform: translateX(0);
+}
+25% {
+	transform: translateX(-30px);
+}
+75% {
+	transform: translateX(30px);
+}
+}
+
+.ob5{
+	background: #4B0082;
+	animation: flip 5s infinite;
+}
+@keyframes flip{
+   0%, 100% {
+	transform: rotateX(0);
+}
+50% {
+	transform: rotateX(180deg);
+}
+}
+
+.kub{
+	width:300px;
+	height: 300px;
+	border: 3px solid black;
+	position: relative;
+	background: #FFC0CB;
+	margin: 0px auto;
+	overflow: hidden;
+}
+.TurboX{
+	width:50px;
+	height: 50px;
+	position: relative;
+	background:green;
+	border-radius: 20px;
+	animation: bounceBox 3s infinite;
+}
+@keyframes bounceBox{
+   0%, 100% {
+	transform: translate(0, 0);
+	background: green;
+}
+25% {
+	transform: translate(250px, 0);
+	background:yellow;
+}
+50% {
+	transform: translate(250px, 250px);
+	background: blue;
+}
+75% {
+	transform: translate(0, 250px);
+	background: red;
+}
+}
+
