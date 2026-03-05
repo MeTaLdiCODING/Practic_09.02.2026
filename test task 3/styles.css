@@ -1,0 +1,82 @@
+.site {
+width: 1000px;
+height: 1000px;
+margin: auto;
+}
+.header {
+width: 1000px;
+height: 250px;
+background: #D3D3D3;
+}
+.logo {
+width: 1000px;
+height: 220px;
+}
+.navigation {
+width: 1000px;
+height: 30px;
+background: #C0C0C0;
+}
+.main {
+width: 1000px;
+height: 2150px;
+background: #A9A9A9;
+}
+.footer {
+width: 1000px;
+height: 58px;
+background: #808080;
+}
+
+
+.table1 {
+	width: 900px;
+	margin: 0 auto;
+	border-collapse: collapse;
+	text-align: center;
+}
+.table1 td,th{
+	border: 2px solid #800080;
+}
+.table1 th{
+	color: black;
+	background: #DCDCDC;
+}
+.table1 tr:nth-child(even){
+	background-color: black;
+	color: white;
+}
+.table1 tr:nth-child(odd){
+	background-color: white;
+	color: black;
+}
+
+
+
+
+.NumSpisok{
+	width: 100px;
+	height: 150px;
+	
+}
+.NoNumSpisok{
+	width: 100px;
+	height: 150px;
+float: right;
+}
+.table2 th, td {
+	border: 0 px;
+}
+.table2 {
+	width: 900px;
+	margin: 0px auto;
+	text-align: left;
+}
+.DetailsSpisoc{
+		margin: 0px auto;
+	text-align: left;
+}
+.main details {
+	text-align: left;
+	padding-left: 10px;
+}
