@@ -1,0 +1,51 @@
+frameset{
+	
+}
+.Main-Left_body a:hover{
+	color:green;
+	text-decoration: none;
+	background: gray;
+	font-size: 20px;
+}
+.Main-Left_body a{
+	text-decoration: none;
+}
+.Head_body{
+	background: black;
+	color:white;
+}
+.Head_body a{
+	background: black;
+	color:white;
+	text-decoration: none;
+}
+.Main-Left_body{
+text-align:center;
+}
+.Main-Left_body img{
+width:400px;
+height:300px;
+}
+.Main-right_body{
+
+}
+.Footer_body{
+	background:red;
+}
+._body img{
+	width:400px;
+	height:300px;
+}
+._body video{
+	width:400px;
+	height:300px;
+}
+._body iframe{
+	width:400px;
+	height:300px;
+}
+._body button:hover{
+	color: red;
+	font-size: 17px;
+	background:black;
+}
