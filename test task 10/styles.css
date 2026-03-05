@@ -1,0 +1,148 @@
+.site {
+width: 1000px;
+height: 1000px;
+margin: auto;
+}
+
+.header {
+width: 1000px;
+height: 240px;
+background: #D3D3D3;
+}
+
+.logo {
+width: 1000px;
+height: 200px;
+text-align: center;
+}
+
+.navigation {
+width: 1000px;
+height: 40px;
+background: #C0C0C0;
+
+}
+
+.main {
+width: 1000px;
+height: 700px;
+background: #A9A9A9;
+
+}
+
+.footer {
+width: 1000px;
+height: 58px;
+background: #808080;
+}
+.site{
+	width: 1000px;
+	height: 1000px;
+	margin: 0px auto:
+}
+
+.menu{
+	list-style-type: none;
+	margin: 0px auto;
+	height: 40px;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	background:#FFC0CB;
+	padding: 0;
+}
+
+.menu li:hover ol{
+	display:block;
+}
+
+.menu ol li {
+	float: none;
+}
+
+.menu li:hover{
+	background-color: #DB7093;
+	}
+
+.menu ol li:hover{
+	background:#DC143C;
+	}
+
+
+.navigation ol{
+	margin:0;
+	padding: 0;
+	list-style-type: none;
+	display: none;
+    position: absolute;
+	top:100%;	
+	width: 162px;
+	z-index: 10;
+	background-color: #FF69B4;
+}
+
+.menu li {
+	position: relative;
+	height: 40px;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+}
+.menu li a{
+	display: inline-block;
+	padding:6px;
+	width: 150px;
+	color: green;
+	text-align: center;
+	text-decoration: none;
+}
+.slider{
+	width:1000px;
+	height:360px;
+	display: flex;
+	font:22px;
+	align-items:center;
+	justify-content: center;
+	background:#808000;
+}
+.foto img{
+	width:330px;
+	height:300px;
+}
+.slider input{
+	display: none;
+}
+.slider input + label{
+	display:inline-block;
+	width:15px;
+	height: 15px;
+	border-radius: 10px;
+	background: green;
+	border: 2px solid black;
+	z-index: 10;
+	position: relative;
+	top: 33%;	
+	cursor: pointer;
+}
+
+.slider input:hover + label{
+	background: #808080;
+}
+.slider input:checked + label{
+	background: #00FF00;
+}
+
+.slider div{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	z-index:0;
+	visibility:hidden;
+
+}
+
+.slider input:checked + label + div{
+	visibility: visible;
+	opacity: 1;
+	transition: background 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+}
