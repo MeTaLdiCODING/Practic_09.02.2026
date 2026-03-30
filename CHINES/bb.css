@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Учитываем padding и border в ширине элемента */
+}
+a{
+    text-decoration: none;
+}
+/*Крыша*/
+img{width: 9em;}
+
+.top{width: 70%;
+    height: 7em;
+}
+.top .TopCon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button{
+    background-color: rgb(39,20,0);
+    color: rgb(245,205,152);
+    width: 10%;
+    height: 30px;
+    border-style: ridge;
+    border-color: rgb(245,205,152);
+    border-width: 1px;
+}
+body{   
+   background: #271400;
+   background-color: rgb(39,20,0);
+}
+.nav-item {
+    cursor: pointer; /*  курсор мыши указатель (как на ссылках) */
+    padding: 0.5rem 1rem;
+    border-radius: 4px; /*скругление углов*/
+    transition: background-color 0.3s; /*плавное изменение фона за 0.3 секунды*/
+}
+.xleb{color: rgb(245,205,152);
+}
+.but{
+  
+    color: rgb(245,205,152);
+}
+/*центр*/
+
+
+.Main{
+    height: 15cm;
+    width: 10cm;
+}
+.Name{
+    height: 2cm;
+    width: 20cm;
+    display: flex;
+  
+}
+.FF{
+    height: 81px;
+}
+.QQ{
+    width: 121px;
+}
+/*текст*/
+.txt{
+    color: rgb(0, 60, 255);
+}
+.QQ1{
+    color: rgb(6, 179, 0);
+}
+.ww{
+    height: 3.8cm;
+}
+/*Днище*/
+.footer { background-color: rgb(29, 15, 1);
+    color: rgb(245,205,152);
+   
+  
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    padding: 0.5rem 1rem;
+    background-color: #4a6572;
+    border-radius: 4px;
+    cursor: pointer;
+}

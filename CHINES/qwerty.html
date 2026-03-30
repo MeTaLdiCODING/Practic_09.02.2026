@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面包中文人民党咖啡厅菜单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'SimHei', 'Microsoft YaHei', 'STKaiti', sans-serif;
+        }
+
+        body {
+            background-color: #8B0000;
+            color: #FFD700;
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(circle at 25% 25%, #A52A2A 10%, transparent 11%),
+                radial-gradient(circle at 75% 75%, #A52A2A 10%, transparent 11%);
+            background-size: 50px 50px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Хедер с партийной символикой */
+        .party-header {
+            background: linear-gradient(135deg, #8B0000 0%, #B22222 50%, #8B0000 100%);
+            color: #FFD700;
+            padding: 20px 0;
+            text-align: center;
+            border: 5px double #FFD700;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .party-header:before {
+            content: "🍞🍞🍞🍞🍞🍞🍞🍞🍞🍞🍞🍞🍞🍞";
+            position: absolute;
+            font-size: 3em;
+            opacity: 0.2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .party-symbol {
+            font-size: 4em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+        }
+
+        .party-title {
+            font-size: 2em;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .party-slogan {
+            font-size: 1.2em;
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid #FFD700;
+            border-bottom: 1px solid #FFD700;
+            display: inline-block;
+            padding: 5px 20px;
+        }
+
+        /* Основной заголовок */
+        .main-header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #8B0000;
+            border: 3px solid #FFD700;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .main-header:before, .main-header:after {
+            content: "🥢";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3em;
+            color: #FFD700;
+        }
+
+        .main-header:before {
+            left: 30px;
+        }
+
+        .main-header:after {
+            right: 30px;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #FFD700;
+            background-color: #8B0000;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #FFD700;
+        }
+
+        /* Категории меню */
+        .menu-category {
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(145deg, #8B0000 0%, #A52A2A 100%);
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            border: 2px solid #FFD700;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-category:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+width: 150px;
+            height: 150px;
+            background: 
+                radial-gradient(circle at 30% 30%, #FFD700 5%, transparent 6%),
+                radial-gradient(circle at 70% 70%, #FFD700 5%, transparent 6%);
+            background-size: 30px 30px;
+            opacity: 0.2;
+        }
+
+        .category-title {
+            color: #FFD700;
+            border-bottom: 3px double #FFD700;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            font-size: 2.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .category-title:before, .category-title:after {
+            content: "🍞";
+            margin: 0 15px;
+            font-size: 1.5em;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 15px;
+            transition: all 0.3s ease;
+            border-bottom: 1px dashed #FFD700;
+            background: rgba(139, 0, 0, 0.7);
+            border-radius: 5px;
+        }
+
+        .menu-item:hover {
+            background: rgba(165, 42, 42, 0.7);
+            transform: translateX(10px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        }
+
+        .item-name {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .item-description {
+            font-size: 1em;
+            color: #FFA500;
+            margin-top: 8px;
+        }
+
+        .item-price {
+            color: #FFD700;
+            font-weight: bold;
+            white-space: nowrap;
+            font-size: 1.4em;
+            background: #8B0000;
+            padding: 5px 15px;
+            border-radius: 5px;
+            border: 1px solid #FFD700;
+        }
+
+        .collective-note {
+            background-color: #8B0000;
+            border: 2px solid #FFD700;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        /* Футер */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            color: #FFD700;
+            border-top: 3px double #FFD700;
+            background-color: #8B0000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer:before {
+            content: "迪克🍞🥢🍞🥢🍞🥢🍞🥢🍞🥢🍞🥢🍞🥢🍞🥢🍞🥢🍞🥢🍞🥢🍞🥢🍞🥢🍞🥢🍞🥢迪克";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            font-size: 1.5em;
+            opacity: 0.3;
+            white-space: nowrap;
+            animation: scroll 30s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .party-quote {
+            font-size: 1.5em;
+            color: #FFD700;
+            margin: 20px 0;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-harmony {
+            display: flex;
+            justify-content: center;
+            margin: 25px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .harmony-item {
+            margin: 0 15px;
+            padding: 10px 20px;
+            background: #8B0000;
+            color: #FFD700;
+            border-radius: 5px;
+            font-size: 1.1em;
+            border: 1px solid #FFD700;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .menu-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .item-price {
+                margin-top: 10px;
+align-self: center;
+            }
+            
+            h1 {
+                font-size: 2.5em;
+            }
+            
+            .main-header:before, .main-header:after {
+                display: none;
+            }
+            
+            .social-harmony {
+                flex-direction: column;
+            }
+            
+            .harmony-item {
+                margin: 5px 0;
+            }
+            
+            .category-title {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="party-header">
+        <div class="party-symbol">🍞⚭🇨🇳</div>
+        <div class="party-title">面包中文人民党</div>
+        <div class="party-slogan">团结、劳动、进步、面包</div>
+    </div>
+
+    <div class="container">
+        <header class="main-header">
+            <h1>人民面包咖啡厅</h1>
+            <p class="subtitle">为了集体利益的和谐品味</p>
+        </header>
+
+        <section class="menu-category">
+            <h2 class="category-title">人民团结咖啡</h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">团结浓缩咖啡</div>
+                    <div class="item-description">象征集体力量的浓咖啡</div>
+                </div>
+                <div class="item-price">15 元</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">进步卡布奇诺</div>
+                    <div class="item-description">浓缩咖啡与牛奶的和谐，为了前进</div>
+                </div>
+                <div class="item-price">19 元</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">集体主义拿铁</div>
+                    <div class="item-description">咖啡与牛奶的细腻平衡，如人民团结</div>
+                </div>
+                <div class="item-price">21 元</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">和谐拉夫</div>
+                    <div class="item-description">奶油、香草糖浆和浓缩咖啡的完美结合</div>
+                </div>
+                <div class="item-price">23 元</div>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <h2 class="category-title">人民智慧茶</h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">传统红茶</div>
+                    <div class="item-description">阿萨姆或伯爵茶 - 千年智慧的饮品</div>
+                </div>
+                <div class="item-price">12 元</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">和谐绿茶</div>
+                    <div class="item-description">茉莉花或经典 - 平衡与和谐</div>
+                </div>
+                <div class="item-price">12 元</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">团结水果茶</div>
+                    <div class="item-description">浆果混合或桃子 - 和谐中的多样性</div>
+                </div>
+                <div class="item-price">14 元</div>
+            </div>
+        </section>
+
+        <section class="menu-category">
+            <h2 class="category-title">人民劳动面包</h2>
+            
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">团结面包</div>
+                    <div class="item-description">按照传统食谱烘焙的新鲜面包</div>
+                </div>
+                <div class="item-price">8 元</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">集体主义馅饼</div>
+                    <div class="item-description">苹果或樱桃 - 共同成就的甜蜜</div>
+                </div>
+                <div class="item-price">18 元</div>
+            </div>
+<div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">进步饼干</div>
+                    <div class="item-description">葡萄干燕麦或巧克力 - 发展的能量</div>
+                </div>
+                <div class="item-price">6 元</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">革命馒头</div>
+                    <div class="item-description">传统中式馒头，象征简单与力量</div>
+                </div>
+                <div class="item-price">5 元</div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-info">
+                    <div class="item-name">人民包子</div>
+                    <div class="item-description">猪肉或蔬菜馅，集体劳动的果实</div>
+                </div>
+                <div class="item-price">10 元</div>
+            </div>
+        </section>
+
+        <div class="collective-note">
+            <p>每一杯购买的饮料都有助于人民计划的发展和社会主义和谐。</p>
+            <p>感谢您为共同福祉做出的贡献！</p>
+        </div>
+
+        <footer>
+            <div class="party-quote">"人民团结就是国家力量，劳动是繁荣之路"</div>
+            
+            <div class="social-harmony">
+                <div class="harmony-item">集体主义</div>
+                <div class="harmony-item">传统</div>
+                <div class="harmony-item">进步</div>
+                <div class="harmony-item">和谐</div>
+                <div class="harmony-item">面包</div>
+            </div>
+            
+            <div class="contact-info">
+                <p>营业时间：每日 7:00 - 21:00</p>
+                <p>人民团结广场 1 号 | 电话: +86 10 1234 5678</p>
+                <p>经面包中文人民党批准</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
